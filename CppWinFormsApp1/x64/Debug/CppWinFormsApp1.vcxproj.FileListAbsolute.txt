@@ -1,3 +1,0 @@
-C:\Users\saada\source\repos\CppWinFormsApp1\CppWinFormsApp1\x64\Debug\CppWinFormsApp1.vcxproj.AssemblyReference.cache
-C:\Users\saada\source\repos\CppWinFormsApp1\CppWinFormsApp1\x64\Debug\CppWinFormsApp1.MyForm.resources
-C:\Users\saada\source\repos\CppWinFormsApp1\CppWinFormsApp1\x64\Debug\CppWinFormsApp1.vcxproj.GenerateResource.cache
