@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.centered-column {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.custom-heading {
+  color: black;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 2.5em;
+  position: static;
+  top: auto;
+  left: auto;
+  transform: none;
+}
+
+.custom-text {
+  color: black;
+  font-weight: 900;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  position: static;
+  top: auto;
+  left: auto;
+  transform: none;
+}
+
+.centered-box {
+  position: static;
+  left: auto;
+  transform: none;
+  background: rgb(255, 255, 255);
+  color: black;
+  padding: 24px 40px;
+  border-radius: 60px;
+  min-width: 450px;
+  text-align: center;
+  font-size: 1.2rem;
+  height: 75px;
+}
+
+.centered-box:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.centered-box:not(input):not(textarea) {
+  cursor: pointer;
+}
+
+.centered-box2 {
+  position: static;
+  left: auto;
+  transform: none;
+  background: rgb(255, 255, 255);
+  color: black;
+  padding: 24px 40px;
+  border-radius: 60px;
+  min-width: 215px;
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Pop-up hover and focus effect for all main boxes and buttons */
+.centered-box,
+.centered-box2,
+.fixed.left-10.bottom-10.w-12.h-12,
+.fixed.right-10.bottom-10.w-12.h-12 {
+  transition: transform 0.18s cubic-bezier(0.4,0,0.2,1), box-shadow 0.18s cubic-bezier(0.4,0,0.2,1), border 0.18s cubic-bezier(0.4,0,0.2,1);
+}
+.centered-box:hover,
+.centered-box:focus,
+.centered-box2:hover,
+.centered-box2:focus,
+.fixed.left-10.bottom-10.w-12.h-12:hover,
+.fixed.right-10.bottom-10.w-12.h-12:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18), 0 1.5px 6px 0 rgba(0,0,0,0.10);
+  z-index: 20;
+}
+
+/* Highlight selected box or button */
+.selected {
+  border: 3.5px solid #2563eb !important; /* blue-600 */
+  box-shadow: 0 8px 32px 0 rgba(37,99,235,0.22), 0 1.5px 6px 0 rgba(37,99,235,0.13);
+  background: rgba(37,99,235,0.08) !important;
+}
+
+.centered-box2-row {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make .centered-box2 buttons in the row on page 3 wider, like the old .centered-box */
+.centered-box2-row .centered-box2 {
+  min-width: 450px;
+}
